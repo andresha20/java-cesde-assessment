@@ -35,13 +35,17 @@ public class Main {
                 }
                 for (String value: dataValues) {
                     String[] substring = value.split(" ");
+                    outputChatbox = value;
+                    System.out.println(outputChatbox);
                     if (substring.length > 1) {
-                        outputChatbox = "Data cannot have spaces. Field name: " + value;
+                        outputChatbox = "Data cannot have spaces. Field name: ";
                         System.out.println(outputChatbox);
                         System.exit(-1);
                     }
                 }
-                int plan_value, cellphone_number = Integer.parseInt(dataValues[0]), years_as_customer = Integer.parseInt(dataValues[2]);
+                System.out.println(dataValues[0]);
+                int plan_value, years_as_customer = Integer.parseInt(dataValues[2]);
+                long cellphone_number = Long.parseLong(dataValues[0]);
                 if (dataValues[0].length() != 10) {
                     outputChatbox = "Invalid cellphone number: 10 digits (min/max). Try again:";
                     System.out.println(outputChatbox);
